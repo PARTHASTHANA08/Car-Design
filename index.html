@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<HTML>
+<HEAD>
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>   
+    <script src="./components/car.js"></script>
+</HEAD>
+<BODY>
+    <A-SCENE>
+        <A-ENTITY id="look" look-control camera position="0 0 50"></A-ENTITY>
+        <A-ASSETS timeout = "1000000">
+            <A-ASSET-ITEM id="car" src="./cyberpunk_car/scene.gltf"></A-ASSET-ITEM>
+        </A-ASSETS>
+        <A-ENTITY 
+        id="model" 
+        gltf-model="#car"
+        position="0 3 2"  
+        rotation="-10 180 0"
+        scale="0.07 0.07 0.07"
+        animation="property: rotation; to: 0 -180 0;easing:linear; loop: true; dur: 15000"
+        cars
+        ></A-ENTITY>
+        <A-ENTITY>
+        <A-CYLINDER position="0 20 -50" height="2" radius ="80" rotation="25 0 0" color="blue"></A-CYLINDER>
+       </A-ENTITY>
+    </A-SCENE>
+</BODY> 
+</HTML>
